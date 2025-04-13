@@ -124,6 +124,9 @@ function renderItems(arr) {
 function searchItem() {
   const searchValue = searchInput.value.trim().toLowerCase();
   const filteredItems = books.filter(item => item.title.toLowerCase().includes(searchValue));
+
+  sortControl.value = "alphabet";  
+  currentBooks = filteredItems;
   renderItems(filteredItems);
 }
 
@@ -150,6 +153,8 @@ function sortBooks() {
 
 btn.addEventListener('click', searchItem);
 
+searchInput.addEventListener('search', searchItem);
+
 searchInput.addEventListener('keypress', function (event) {
   if (event.key === 'Enter') {
     searchItem();
@@ -161,6 +166,3 @@ sortControl.addEventListener("change", () => {
 });
 
 renderItems(currentBooks);
-
-
-
