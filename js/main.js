@@ -125,7 +125,7 @@ function searchItem() {
   const searchValue = searchInput.value.trim().toLowerCase();
   const filteredItems = books.filter(item => item.title.toLowerCase().includes(searchValue));
 
-  sortControl.value = "alphabet";  
+  sortControl.selectedIndex = 0;  
   currentBooks = filteredItems;
   renderItems(filteredItems);
 }
@@ -134,6 +134,9 @@ function sortBooks() {
   const selectOption = sortControl.value;
 
   switch (selectOption) {
+    case "nothing":
+      searchItem();
+      break;
     case "expensive": 
       currentBooks.sort((a, b) => b.price - a.price);
       break;
