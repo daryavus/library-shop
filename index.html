@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library - Книжный магазин</title>
+  <link rel="icon" type="image/x-icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="menu">
+        <a class="menu__logo logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип магазина" width="200" height="68">
+        </a>
+
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a class="menu__list-link animation-link" href="#">Главная</a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link animation-link" href="#">Каталог</a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link animation-link" href="#">Корзина</a>
+          </li>
+        </ul>
+
+        <div class="search">
+          <label class="search__item" for="search">
+            <input class="search__field" id="search" type="search" placeholder="Поиск по каталогу">
+          </label>
+
+          <button class="search__btn"></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="catalogue section">
+
+        <div class="filters">
+          <div class="filters-sort">
+            <label for="sort">Сортировка:</label>
+            <select name="sort" id="sort">
+              <option selected value="nothing">Не выбрано</option>
+              <option value="alphabet">По алфавиту</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="cheap">Сначала дешевые</option>
+              <option value="rating">Рейтинг</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="shop-items">
+        </div>
+
+        <p class="nothing-found">Ничего не найдено</p>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a class="footer__logo logo" href="#">LIBRARY</a>
+      </div>
+    </div>
+  </footer>
+
+  <template id="template">
+    <div class="shop-item">
+      <img src="">
+      <div class="content">
+        <div class="tags"></div>
+        <h1></h1>
+        <p></p>
+      </div>
+      <div class="item-footer">
+        <span class="price"></span>
+        <div class="rating"></div>
+      </div>
+    </div>
+    </div>
+  </template>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
